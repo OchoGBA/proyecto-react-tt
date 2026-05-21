@@ -1,0 +1,14 @@
+.hero h1 {
+    font-size: 56px;
+    letter-spacing: -1.68px;
+    margin: 32px 0;
+}
+
+.hero p {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.5;
+}

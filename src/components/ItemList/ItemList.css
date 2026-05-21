@@ -3,5 +3,15 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+.products-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.products-container a * {
+    text-decoration: none;
 }
