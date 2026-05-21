@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
+import { Hero } from "../Hero/Hero"
 
 export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
@@ -19,6 +20,7 @@ export const ItemListContainer = () => {
     
     return (
         <section>
+            <Hero />
             <ItemList products={products} />
         </section>
     );
