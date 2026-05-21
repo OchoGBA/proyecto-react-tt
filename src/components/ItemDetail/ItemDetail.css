@@ -3,4 +3,10 @@
     padding: 0.5rem;
     border-radius: 10px;
     font-size: 1rem;
+} 
+.btn.primary:hover {
+    cursor: pointer;
+}
+.btn.primary:active {
+    background-color: #444;
 }
