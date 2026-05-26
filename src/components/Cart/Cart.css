@@ -1,0 +1,44 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-items-container {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.empty-cart {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.cart-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-actions p {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+button.btn.bg-succes.primary {
+    margin: 2rem auto;
+    background-color: #2e7d32;
+}
+button.btn.bg-succes.primary:hover {
+    background-color: #388e3c;
+}
+
+button.btn.bg-delete.primary {
+    background-color: #b23b3b;
+    margin-top: auto;
+}
+button.btn.bg-delete.primary:hover {
+    background-color: #8b2626;
+}

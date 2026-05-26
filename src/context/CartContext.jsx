@@ -58,12 +58,14 @@ export const CartProvider = ({ children }) => {
 
     //Checkout
     const checkout = () => {
-        alert("Su compra ha sido realizada 🎉");
-        clearCart();
-        navigate("/");
+        if (confirm("¿Desea confirmar su compra?")) {
+            alert("Su compra ha sido realizada 🎉");
+            clearCart();
+            navigate("/");
+        };
     };
 
 
-    const values = { addItem, removeItem, clearCart, getTotalItem, getCartTotal, checkout };
+    const values = { cart, addItem, removeItem, clearCart, getTotalItem, getCartTotal, checkout };
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>;
 };
