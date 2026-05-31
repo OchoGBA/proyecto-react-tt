@@ -38,7 +38,7 @@ export const CartProvider = ({ children }) => {
     const removeItem = (id) => {
         const updatedCart = cart.filter((element) => element.id !== id);
         setCart(updatedCart);
-        alert("Producto eliminado ✅");
+        alert("Producto eliminado 🧹");
     };
 
     //vaciar carrito
