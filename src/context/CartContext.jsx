@@ -29,7 +29,13 @@ export const CartProvider = ({ children }) => {
             alert("El producto ya existe en el carrito");
             return
         }
-        setCart([...cart, item]);
+
+        const normalizedItem = {
+            ...item,
+            price: Number(item.price ?? 0),
+        };
+
+        setCart([...cart, normalizedItem]);
         alert("Producto agregado al carrito 🎉");
 
     };
@@ -53,7 +59,7 @@ export const CartProvider = ({ children }) => {
 
     //Total a pagar
     const getCartTotal = () => {
-        return cart.reduce((acc, element) => acc + element.price, 0);
+        return cart.reduce((acc, element) => acc + Number(element.price ?? 0), 0);
     };
 
     //Checkout

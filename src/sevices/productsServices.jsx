@@ -1,9 +1,10 @@
-import { collection, addDoc, getDocs, getDoc, doc, query, where } from "firebase/firestore"
+import { collection, addDoc, getDocs, getDoc, doc } from "firebase/firestore"
 
 import { db } from "../firebase/config";
 
 const productsRef = collection(db, "products");
 
+// Traer Productos
 export const getProducts = async () => {
     try {
         const snapshot = await getDocs(productsRef);
@@ -41,4 +42,17 @@ export const getProductById = async (id) => {
         console.error("Error al traer producto por ID:", error);
         return null;
     }
+};
+
+// Crear Producto
+export const createProduct = async (productData) => {
+  try {
+    // Tan fácil como usar la función addDoc y pasarle la colección y el doc a agregar
+    const docRef = await addDoc(productsRef, productData);
+
+    return docRef.id; // opcional, por si quieren usar el id para algo
+  } catch (error) {
+    console.error("Error al crear producto:", error);
+    throw error;
+  }
 };
